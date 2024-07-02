@@ -12,9 +12,10 @@ genai.configure(api_key=os.getenv("GEMINI_KEY"))
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 @app.get("/ai/chatai")
-def chatAi() :
+async def chatAi() :
   req = request.args.get("prompt")
-  response = model.generate_content(req)
-  return {"response" : response.text}
+  response =  model.generate_content(req)
 
+  return {"response" : response.text}
+  
 

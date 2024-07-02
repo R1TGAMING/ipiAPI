@@ -5,4 +5,4 @@ jokes = Joking
 
 @app.route("/randomJokes")
 def randomJokes():
-  return {"joke" : jokes.random_joke()}
+  return {"joke" : jokes.random_joke().replace("\n", " ")}
