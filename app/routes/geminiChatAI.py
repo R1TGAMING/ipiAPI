@@ -15,7 +15,8 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 def chatAi() :
   req = request.args.get("prompt")
   response =  model.generate_content(req)
-
-  return {"response" : response.text}
-  
+  try :
+    return {"response" : response.text}
+  except Exception as e :
+    return {"error" : e}
 
