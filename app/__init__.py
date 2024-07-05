@@ -5,4 +5,4 @@ app = Flask(__name__)
 
 #All Of The Projects
 from app import mainRoutes
-from app.routes import randomJokes, drakeMeme, geminiChatAI, wanted
+from app.routes import randomJokes, drakeMeme, geminiChatAI, wanted, customMeme
